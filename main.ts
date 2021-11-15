@@ -1,5 +1,5 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`transparency16`)) {
+    if (mySprite.tileKindAt(TileDirection.Bottom, sprites.dungeon.collectibleInsignia)) {
         mySprite.setImage(img`
             . . . . . . . . . . . . . . . . 
             . . . . c c c c . . . . . . . . 
@@ -18,11 +18,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             . . c c c c c b 5 5 b c c c . . 
             . . c b b b c d 5 5 b c . . . . 
             `)
-        tiles.setTilemap(tilemap`level1`)
     }
 })
 let mySprite: Sprite = null
-music.playMelody("B A B G D C F E ", 150)
 mySprite = sprites.create(img`
     . . . . . . . c c c . . . . . . 
     . . . . . . c b 5 c . . . . . . 
